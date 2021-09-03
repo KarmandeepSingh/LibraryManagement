@@ -349,7 +349,7 @@ public class Library implements Serializable {
 				control = false;
 				break;
 			default:
-				System.out.println("Enter a valid option");
+				System.err.println("Enter a valid option");
 				control = true;
 				break;
 
@@ -518,7 +518,7 @@ public class Library implements Serializable {
 				control = false;
 				break;
 			default:
-				System.out.println("Enter a valid option");
+				System.err.println("Enter a valid option");
 				control = true;
 				break;
 
@@ -740,7 +740,7 @@ public class Library implements Serializable {
 						}
 					}
 				} else {
-					System.out.println("No staff in the database");
+					System.err.println("No staff in the database");
 				}
 				break;
 			case 6:
@@ -749,7 +749,7 @@ public class Library implements Serializable {
 				writeUsers();//saves user data to a particular file
 				break;
 			default:
-				System.out.println("Enter a valid option");
+				System.err.println("Enter a valid option");
 				control = true;
 				break;
 			}
@@ -776,7 +776,7 @@ public class Library implements Serializable {
 			System.out.print("Enter option: ");
 			choice = input.inputPositiveInteger();
 			if (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5 && choice != 6)
-				System.out.println("Enter a valid option");
+				System.err.println("Enter a valid option");
 
 		} while (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5 && choice != 6);
 

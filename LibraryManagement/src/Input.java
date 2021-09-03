@@ -239,7 +239,7 @@ public class Input {
 				}
 				control=false;
 			}catch(Exception e) {
-				System.out.print("Enter valid single character: ");
+				System.err.print("Enter valid single character: ");
 			}
 			
 		}while(control);
@@ -259,7 +259,7 @@ public class Input {
 					throw new Exception();
 				control=false;
 			}catch(Exception e) {
-				System.out.print("Enter a valid letter: ");
+				System.err.print("Enter a valid letter: ");
 			}
 			
 		}while(control);
