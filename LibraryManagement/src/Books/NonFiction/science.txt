@@ -1,0 +1,3 @@
+11,Big Java: Early Objects,Cay S. Horstmann,Programming,A really good book for learning java programming
+,12,Java: How to Program,Paul Deitel & Harvey Deitel,Programming,A really good book for learning java programming
+,13,The Elegant Universe,Brian Greene,Cosmology,A really good book about Astronomy and Astrophysics
