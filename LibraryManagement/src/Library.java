@@ -44,38 +44,38 @@ public class Library implements Serializable {
 	 * @param input Reads input from the user and a file
 	 */
 	public static void addMember(Input input) {
-		System.out.println("1. New Customer");
-		System.out.println("2. New Staff Member");
-
-		System.out.print("Enter your option: ");
 		int option = 0;
 		boolean control = true;
-
 		do {
-			try { //prevents the user from entering wrong option
-				option = input.inputPositiveInteger();
-				if (option != STAFF && option != CUSTOMER)
-					throw new Exception();
+		System.out.println("1. New Customer");
+		System.out.println("2. New Staff Member");
+		System.out.println("3. <-Go Back");
 
-				control = false;
-			} catch (Exception e) {
-				System.err.println("Wrong option entered");
-				System.out.print("Enter correct option: ");
-			}
-		} while (control);
-
+		System.out.print("Enter your option: ");
+		option = input.inputPositiveInteger();
+		
 		switch (option) {
 		case CUSTOMER://creates a customer
 			members.add(new Customer());
 			members.get(members.size() - 1).readPerson(input);
+			control=false;
 			break;
 		case STAFF://creates a staff member
 			members.add(new Staff());
 			members.get(members.size() - 1).readPerson(input);
+			control=false;
+			break;
+		case 3:
+			control=false;
+			break;
+		default:
+			System.err.println("Wrong option entered");
+			System.out.print("Enter correct option: ");
 			break;
 
 		}
 
+		}while(control);
 	}
 
 	/**
